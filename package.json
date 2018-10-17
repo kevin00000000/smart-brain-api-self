@@ -4,7 +4,7 @@
   "description": "end-ending for smart-brain-self",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "keywords": [
     "express",
