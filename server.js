@@ -33,6 +33,8 @@ app.listen(process.env.PORT, () => {
 })
 
 /*
+Table DDL
+
 CREATE TABLE public.logins (
 	id serial NOT NULL,
 	email text NOT NULL,
