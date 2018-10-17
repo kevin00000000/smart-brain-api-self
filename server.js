@@ -30,6 +30,6 @@ app.post('/register', registerHandler(db, bcrypt))
 app.put('/entry', entryHandler(db))
 app.post('/clarifai', clarifaiHandler())
 
-app.listen(process.env.LISTEN_PORT, () => {
-    console.log(`app is running on port ${process.env.LISTEN_PORT}`)
+app.listen(process.env.PORT, () => {
+    console.log(`app is running on port ${process.env.PORT}`)
 })
