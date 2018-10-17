@@ -24,11 +24,12 @@ const app = express();
 app.use(cors())
 app.use(bodyParser.json())
 
+app.get('/', (req, res) => {res.json('server is workding，please access api')})
 app.post('/signin', signinHandler(db, bcrypt))
 app.post('/register', registerHandler(db, bcrypt))
 app.put('/entry', entryHandler(db))
 app.post('/clarifai', clarifaiHandler())
 
-app.listen(3000, () => {
-    console.log(`app is running on port ${3000}`)
+app.listen(process.env.LISTEN_PORT, () => {
+    console.log(`app is running on port ${process.env.LISTEN_PORT}`)
 })
